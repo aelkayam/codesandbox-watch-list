@@ -3,12 +3,11 @@ import { readFile } from "fs";
 import cors from "cors";
 
 const app = express();
-//const port = process.env.PORT || 5000;
-const port = 3001;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
-// app.use(json());
-// app.use(urlencoded({ extended: true }));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: true }));
 
 // // API calls
 // app.get("/api/hello", (req, res) => {

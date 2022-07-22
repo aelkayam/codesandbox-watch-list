@@ -8,7 +8,7 @@ export default function Add() {
 
   // load all movies:
   useEffect(() => {
-    fetch("http://localhost:3001/ghibli-data").then((res) =>
+    fetch("/ghibli-data").then((res) =>
       res.json().then((data) => {
         if (!data.errors) {
           setResults(data);
@@ -24,7 +24,7 @@ export default function Add() {
     e.preventDefault();
     setQuery(e.target.value);
 
-    fetch("http://localhost:3001/ghibli-data").then((res) =>
+    fetch("/ghibli-data").then((res) =>
       res.json().then((data) => {
         if (!data.errors) {
           setResults(() =>
