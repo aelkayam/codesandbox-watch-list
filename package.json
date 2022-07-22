@@ -1,13 +1,13 @@
 {
-  "name": "server",
+  "name": "watchlist",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ghibli films watchlist app",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
-    "client": "cd /client && npm start",
+    "client": "cd client && npm i && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "keywords": [],
