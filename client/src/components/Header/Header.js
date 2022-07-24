@@ -13,17 +13,16 @@ export default function Header() {
             <Link to="/">WatchList</Link>
           </div>
 
-          {/* <div className="button">Change Background</div> */}
-
           <ul className="nav-links">
             <li>
-              <Link to="/">Watch List</Link>
+              <Link to="/About">About</Link>
             </li>
-
+            <li>
+              <Link to="/watchlist">Watch List</Link>
+            </li>
             <li>
               <Link to="/watched">Watched</Link>
             </li>
-
             <li>
               <Link to="/add" className="button">
                 Add

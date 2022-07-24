@@ -1,0 +1,29 @@
+.about {
+  padding: 30px 0;
+}
+
+.about .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.about .heading {
+  color: var(--primary);
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main .info {
+  text-indent: 15px;
+  font-weight: 400;
+}
+
+main .info-logo {
+  width: 80%;
+  align-self: center;
+}
