@@ -1,7 +1,6 @@
 import "./Add.css";
 import React, { useEffect, useState } from "react";
 import ResultCard from "../ResultCard/ResultCard";
-// import ghibli from "../../ghibli-data.json";
 
 export default function Add() {
   const [query, setQuery] = useState("");
@@ -10,9 +9,12 @@ export default function Add() {
   // load all movies:
   useEffect(() => {
     fetch("https://372smd-5000.sse.codesandbox.io/ghibli").then((res) => {
-      console.log(res);
       res.json().then((data) => {
-        setResults(data);
+        if (!data.errors) {
+          setResults(data);
+        } else {
+          setResults([]);
+        }
       });
     });
   }, []);
@@ -23,30 +25,18 @@ export default function Add() {
     setQuery(e.target.value);
     fetch("https://372smd-5000.sse.codesandbox.io/ghibli").then((res) => {
       res.json().then((data) => {
-        setResults(() =>
-          data.filter((movie) =>
-            movie.title.toLowerCase().includes(query.toLowerCase())
-          )
-        );
+        if (!data.errors) {
+          setResults(() =>
+            data.filter((movie) =>
+              movie.title.toLowerCase().includes(query.toLowerCase())
+            )
+          );
+        } else {
+          setResults([]);
+        }
       });
     });
   }
-
-  // // load all movies:
-  // useEffect(() => {
-  //   setResults(ghibli);
-  // }, []);
-
-  // // filter by title:
-  // function inputChange(e) {
-  //   e.preventDefault();
-  //   setQuery(e.target.value);
-  //   setResults(() =>
-  //     ghibli.filter((movie) =>
-  //       movie.title.toLowerCase().includes(query.toLowerCase())
-  //     )
-  //   );
-  // }
 
   return (
     <div className="add-page">
