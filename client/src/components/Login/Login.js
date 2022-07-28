@@ -1,7 +1,10 @@
 import "./Login.css";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Login() {
+  const { username, password } = useContext(AuthContext);
+
   const userRef = useRef();
   const errRef = useRef();
 
@@ -20,10 +23,13 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user, pwd);
-    setUser("");
-    setPwd("");
-    setSuccess(true);
+    if (user === username && pwd === password) {
+      setSuccess(true);
+      setUser("");
+      setPwd("");
+    } else {
+      setErrMsg("Login Failed");
+    }
   };
 
   return (

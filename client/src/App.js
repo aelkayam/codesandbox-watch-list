@@ -12,21 +12,24 @@ import "./lib/font-awesome/css/all.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { GlobalProvider } from "./context/GlobalState";
+import { AuthProvider } from "./context/AuthContext";
 
 export default function App() {
   return (
-    <GlobalProvider>
-      <Router>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/watchlist" element={<WatchList />} />
-          <Route path="/watched" element={<Watched />} />
-          <Route path="/Add" element={<Add />} />
-        </Routes>
-      </Router>
-    </GlobalProvider>
+    <AuthProvider>
+      <GlobalProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/watchlist" element={<WatchList />} />
+            <Route path="/watched" element={<Watched />} />
+            <Route path="/Add" element={<Add />} />
+          </Routes>
+        </Router>
+      </GlobalProvider>
+    </AuthProvider>
   );
 }

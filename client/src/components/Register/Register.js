@@ -1,10 +1,13 @@
 import "./Register.css";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 export default function Register() {
+  const { saveUserData } = useContext(AuthContext);
+
   const userRef = useRef();
   const errRef = useRef();
 
@@ -50,8 +53,8 @@ export default function Register() {
       setErrMsg("Invalid Entry");
       return;
     }
-    console.log(user, pwd);
     setSuccess(true);
+    saveUserData({ username: user, password: pwd });
   };
 
   return (
