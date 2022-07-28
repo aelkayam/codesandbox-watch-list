@@ -15,6 +15,10 @@
   font-size: 1.25rem;
 }
 
+.sort-wrapper {
+  margin-bottom: 5px;
+}
+
 .results {
   padding: 0;
   margin: 0;
@@ -61,7 +65,7 @@
   margin: 0;
 }
 
-.result-card .info .reviews{
+.result-card .info .reviews {
   font-size: 0.9rem;
   font-weight: 300;
   color: var(--primary);

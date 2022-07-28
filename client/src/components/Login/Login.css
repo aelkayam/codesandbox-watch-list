@@ -10,7 +10,7 @@
 .login section {
   width: 100%;
   max-width: 420px;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,7 +24,8 @@ form {
   justify-content: space-evenly;
   flex-grow: 1;
   padding-bottom: 1rem;
-  color: black;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 input[type="text"],
@@ -88,5 +89,5 @@ label,
 
 .line {
   display: inline-block;
-  margin-right: 15px;
+  margin-left: 15px;
 }
