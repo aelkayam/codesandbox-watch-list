@@ -184,6 +184,7 @@ export default function Register() {
             </p>
 
             <button
+              className="button"
               disabled={!validName || !validPwd || !validMatch ? true : false}
             >
               Sign Up

@@ -7,6 +7,12 @@ const reducer = (state, action) => {
         username: [action.payload.username],
         password: [action.payload.password]
       };
+
+    case "LOGIN":
+      return {
+        ...state,
+        logged: [action.payload]
+      };
     default:
       return state;
   }

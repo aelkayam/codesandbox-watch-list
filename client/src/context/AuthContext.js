@@ -8,7 +8,10 @@ const initialState = {
     : "",
   password: localStorage.getItem("password")
     ? localStorage.getItem("password")
-    : ""
+    : "",
+  logged: localStorage.getItem("logged")
+    ? JSON.parse(localStorage.getItem("logged"))
+    : [false]
 };
 
 // create context:
@@ -21,6 +24,7 @@ export function AuthProvider(props) {
   useEffect(() => {
     localStorage.setItem("username", state.username);
     localStorage.setItem("password", state.password);
+    localStorage.setItem("logged", state.logged);
   }, [state]);
 
   // actions:
@@ -28,12 +32,18 @@ export function AuthProvider(props) {
     dispatch({ type: "SAVE_USER_DATA", payload: userData });
   }
 
+  function login(confirmation) {
+    dispatch({ type: "LOGIN", payload: confirmation });
+  }
+
   return (
     <AuthContext.Provider
       value={{
         username: state.username,
         password: state.password,
-        saveUserData
+        logged: state.logged,
+        saveUserData,
+        login
       }}
     >
       {props.children}
