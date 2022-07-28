@@ -5,6 +5,7 @@ import Watched from "./components/Watched/Watched";
 import Add from "./components/Add/Add";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Register from "./components/Register/Register";
 import "./style.css";
 import "./lib/font-awesome/css/all.min.css";
 
@@ -20,6 +21,7 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/watchlist" element={<WatchList />} />
           <Route path="/watched" element={<Watched />} />
           <Route path="/Add" element={<Add />} />

@@ -21,9 +21,10 @@ main {
 main .info {
   text-indent: 15px;
   font-weight: 400;
+  padding-inline: 20px;
 }
 
 main .info-logo {
-  width: 80%;
+  width: 50%;
   align-self: center;
 }

@@ -1,5 +1,6 @@
 import "./Home.css";
 import React from "react";
+import Login from "../Login/Login";
 
 export default function Home() {
   return (
@@ -14,18 +15,19 @@ export default function Home() {
             favorite films by Studio-Ghibli
           </li>
           <li>
-            <i className="fa fa-ul fa-hand-point-right"></i> Click on ADD to add
-            a new film to your watch list
+            <i className="fa fa-ul fa-hand-point-right"></i> Sign in below to
+            start adding movies
           </li>
           <li>
-            <i className="fa fa-ul fa-hand-point-right"></i> Click on the eye to
-            mark it as WATCHED
+            <i className="fa fa-ul fa-hand-point-right"></i> Click the eye icon
+            to mark it as WATCHED
           </li>
           <li>
-            <i className="fa fa-ul fa-hand-point-right"></i> Click the X icon to
-            remove it from your list
+            <i className="fa fa-ul fa-hand-point-right"></i> Click the 'X' icon
+            to remove from the list
           </li>
         </ul>
+        <Login />
       </div>
     </div>
   );
