@@ -77,7 +77,7 @@ body:before {
 }
 
 .button:hover {
-  background-color: #1aa762;
+  background-color: rgb(238, 139, 90);
   opacity: 1;
   cursor: pointer;
 }

@@ -1,9 +1,11 @@
 import "./Header.css";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import icon from "../../images/ghibli-icon.png";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Header() {
+  const { logged } = useContext(AuthContext);
   return (
     <header>
       <div className="container">
@@ -24,9 +26,15 @@ export default function Header() {
               <Link to="/watched">Watched</Link>
             </li>
             <li>
-              <Link to="/add" className="button">
-                Add
-              </Link>
+              {logged ? (
+                <Link to="/add" className="button">
+                  Add
+                </Link>
+              ) : (
+                <button className="button" disabled={true}>
+                  Add
+                </button>
+              )}
             </li>
           </ul>
         </div>

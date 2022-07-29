@@ -4,7 +4,7 @@ const reducer = (state, action) => {
     case "ADD_MOVIE_TO_WATCHLIST":
       return {
         ...state,
-        watchlist: [...state.watchlist, action.payload],
+        watchlist: [...state.watchlist, action.payload]
       };
 
     // remove a movie from the watch list:
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
         ...state,
         watchlist: state.watchlist.filter(
           (movie) => movie.id !== action.payload
-        ),
+        )
       };
 
     // add a movie from watch list to watched:
@@ -23,7 +23,7 @@ const reducer = (state, action) => {
         watchlist: state.watchlist.filter(
           (movie) => movie.id !== action.payload.id
         ),
-        watched: [...state.watched, action.payload],
+        watched: [...state.watched, action.payload]
       };
 
     // move a movie from watched back to watch list:
@@ -33,14 +33,28 @@ const reducer = (state, action) => {
         watched: state.watched.filter(
           (movie) => movie.id !== action.payload.id
         ),
-        watchlist: [...state.watchlist, action.payload],
+        watchlist: [...state.watchlist, action.payload]
       };
 
     // remove a movie from watched entirely:
     case "REMOVE_FROM_WATCHED":
       return {
         ...state,
-        watched: state.watched.filter((movie) => movie.id !== action.payload),
+        watched: state.watched.filter((movie) => movie.id !== action.payload)
+      };
+
+    // clear all watch list
+    case "CLEAR_WATCHLIST":
+      return {
+        ...state,
+        watchlist: []
+      };
+
+    // clear all watched list
+    case "CLEAR_WATCHED":
+      return {
+        ...state,
+        watched: []
       };
     default:
       return state;

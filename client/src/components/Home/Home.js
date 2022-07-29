@@ -23,8 +23,8 @@ export default function Home() {
             to mark it as WATCHED
           </li>
           <li>
-            <i className="fa fa-ul fa-hand-point-right"></i> Click the 'X' icon
-            to remove from the list
+            <i className="fa fa-ul fa-hand-point-right"></i> Click the X icon to
+            remove from the list
           </li>
         </ul>
         <Login />

@@ -3,12 +3,22 @@ import { GlobalContext } from "../../context/GlobalState";
 import MovieCard from "../MovieCard/MovieCard";
 
 export default function Watched() {
-  const { watched } = useContext(GlobalContext);
+  const { watched, clearWatched } = useContext(GlobalContext);
+
   return (
     <div className="movie-page">
       <div className="container">
         <div className="header">
           <h1 className="heading">Watched Movies</h1>
+          <button
+            className="button"
+            onClick={() => {
+              clearWatched();
+              window.location.reload();
+            }}
+          >
+            Clear All
+          </button>
           <span className="count-pill">
             {watched.length} {watched.length === 1 ? "Movie" : "Movies"}
           </span>

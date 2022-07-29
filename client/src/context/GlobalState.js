@@ -8,7 +8,7 @@ const initialState = {
     : [],
   watched: localStorage.getItem("watched")
     ? JSON.parse(localStorage.getItem("watched"))
-    : [],
+    : []
 };
 
 // create context
@@ -44,6 +44,14 @@ export function GlobalProvider(props) {
     dispatch({ type: "REMOVE_FROM_WATCHED", payload: id });
   }
 
+  function clearWatchlist() {
+    dispatch({ type: "CLEAR_WATCHLIST" });
+  }
+
+  function clearWatched() {
+    dispatch({ type: "CLEAR_WATCHED" });
+  }
+
   return (
     <GlobalContext.Provider
       value={{
@@ -54,6 +62,8 @@ export function GlobalProvider(props) {
         addMovieToWatched,
         moveToWatchlist,
         removeFromWatched,
+        clearWatchlist,
+        clearWatched
       }}
     >
       {props.children}
