@@ -66,7 +66,7 @@ export default function Add() {
           <div className="sort-wrapper">
             <span className="sort-title">Sort by: </span>
             <select
-              className="sort"
+              className="select"
               onChange={(e) => setSortType(e.target.value)}
             >
               <option value="releaseDate">Release date</option>

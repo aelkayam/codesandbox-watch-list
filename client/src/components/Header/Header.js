@@ -5,7 +5,8 @@ import icon from "../../images/ghibli-icon.png";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Header() {
-  const { logged } = useContext(AuthContext);
+  const { logged, username } = useContext(AuthContext);
+
   return (
     <header>
       <div className="container">
@@ -16,8 +17,13 @@ export default function Header() {
           </div>
 
           <ul className="nav-links">
+            {logged && (
+              <li>
+                <Link to="/settings">{username}</Link>
+              </li>
+            )}
             <li>
-              <Link to="/About">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/watchlist">Watch List</Link>

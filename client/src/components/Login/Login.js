@@ -32,7 +32,6 @@ export default function Login() {
       {logged ? (
         <section>
           <h1>You are logged in!</h1>
-          <br />
           <p>
             <a href="/add">Start adding movies!</a>
           </p>

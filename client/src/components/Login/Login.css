@@ -28,6 +28,11 @@ form {
   font-weight: 600;
 }
 
+.login a,
+.login a:visited {
+  color: var(--primary);
+}
+
 input[type="text"],
 input[type="password"],
 .login button,
