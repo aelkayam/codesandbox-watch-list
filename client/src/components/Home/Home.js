@@ -16,15 +16,17 @@ export default function Home() {
           </li>
           <li>
             <i className="fa fa-ul fa-hand-point-right"></i> Sign in below to
-            start adding movies
+            start adding movies and adjusting the themes
           </li>
           <li>
-            <i className="fa fa-ul fa-hand-point-right"></i> Click the eye icon
-            to mark it as WATCHED
+            <i className="fa fa-ul fa-hand-point-right"></i> Click the{" "}
+            <i className="fa-fw far fa-eye"></i> icon to mark an entry as
+            WATCHED
           </li>
           <li>
-            <i className="fa fa-ul fa-hand-point-right"></i> Click the X icon to
-            remove from the list
+            <i className="fa fa-ul fa-hand-point-right"></i> Click the{" "}
+            <i className="fa-fw fa fa-times"></i> icon to REMOVE an entry from
+            the list
           </li>
         </ul>
         <Login />

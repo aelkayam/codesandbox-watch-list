@@ -10,7 +10,10 @@
     "client": "cd client && npm i && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
-  "keywords": ["watchlist", "ghibli"],
+  "keywords": [
+    "watchlist",
+    "ghibli"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {

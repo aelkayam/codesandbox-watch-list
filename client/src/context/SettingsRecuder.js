@@ -4,14 +4,14 @@ const reducer = (state, action) => {
     case "CHANGE_BACKGROUND":
       return {
         ...state,
-        background: [action.payload],
+        background: [action.payload]
       };
 
     // change theme
     case "CHANGE_THEME":
       return {
         ...state,
-        theme: action.payload,
+        theme: [action.payload]
       };
 
     default:

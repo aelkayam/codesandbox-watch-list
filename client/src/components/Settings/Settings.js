@@ -60,7 +60,7 @@ export default function Settings() {
         </div>
         <div className="settings-options">
           <div className="change-bg">
-            <h3>Choose background image: </h3>
+            <h3>Choose background: </h3>
             <select
               className="select"
               onChange={(e) => handleBackground(e.target.value)}

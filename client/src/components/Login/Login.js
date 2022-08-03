@@ -28,23 +28,23 @@ export default function Login() {
     }
   };
 
+  function logout() {
+    login(false);
+  }
+
   return (
     <div className="login">
       {logged ? (
-        <section>
+        <section className="logged">
           <h1>You are logged in!</h1>
           <p>
-            <Link to="/add">Start adding movies!</Link>
+            <Link className="button" to="/add">
+              Start adding movies!
+            </Link>
           </p>
-          <button
-            className="button"
-            onClick={() => {
-              login(false);
-              window.location.reload();
-            }}
-          >
+          <a href="/" onClick={() => logout()}>
             Logout
-          </button>
+          </a>{" "}
         </section>
       ) : (
         <section>

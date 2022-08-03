@@ -8,12 +8,12 @@ const initialState = {
     ? localStorage.getItem("background")
     : { wallpaper1 },
   theme: localStorage.getItem("theme")
-    ? localStorage.getItem("theme")
+    ? JSON.parse(localStorage.getItem("theme"))
     : {
         primary: "#00539CFF",
         secondary: "#EEA47FFF",
-        text: "white",
-      },
+        text: "white"
+      }
 };
 
 // create context:
@@ -43,7 +43,7 @@ export function SettingsProvider(props) {
         background: state.background,
         theme: state.theme,
         changeBackground,
-        changeTheme,
+        changeTheme
       }}
     >
       {props.children}

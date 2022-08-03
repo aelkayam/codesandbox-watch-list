@@ -18,6 +18,12 @@
   background-color: transparent;
 }
 
+.logged {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
