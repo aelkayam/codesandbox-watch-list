@@ -3,8 +3,12 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 
 export default function ResultCard({ movie }) {
-  const { addMovieToWatchlist, addMovieToWatched, watchlist, watched } =
-    useContext(GlobalContext);
+  const {
+    addMovieToWatchlist,
+    addMovieToWatched,
+    watchlist,
+    watched
+  } = useContext(GlobalContext);
 
   // check if the movie already in a list:
   let storedMovie = watchlist.find((o) => o.id === movie.id);
@@ -25,7 +29,10 @@ export default function ResultCard({ movie }) {
           <h4 className="release-date">
             {movie.release_date ? movie.release_date : "-"}
           </h4>
-          <h4 className="reviews">{"Score: " + movie.rt_score + "%"}</h4>
+          <h4 className="reviews">
+            {"Score: " + movie.rt_score + "%"}
+            {" --- " + movie.running_time + " min"}
+          </h4>
         </div>
         <div className="controls">
           <button
