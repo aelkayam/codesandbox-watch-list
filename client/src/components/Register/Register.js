@@ -1,4 +1,5 @@
 import "./Register.css";
+import { Link } from "react-router-dom";
 import { useRef, useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -193,7 +194,7 @@ export default function Register() {
           <p>
             Already registered?
             <span className="line">
-              <a href="/">Sign In</a>
+              <Link to="/">Sign In</Link>
             </span>
           </p>
         </section>

@@ -1,4 +1,5 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
 import { useRef, useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -33,7 +34,7 @@ export default function Login() {
         <section>
           <h1>You are logged in!</h1>
           <p>
-            <a href="/add">Start adding movies!</a>
+            <Link to="/add">Start adding movies!</Link>
           </p>
           <button
             className="button"
@@ -79,7 +80,7 @@ export default function Login() {
           <p>
             Need an Account?
             <span className="line">
-              <a href="/register">Sign Up</a>
+              <Link to="/register">Sign Up</Link>
             </span>
           </p>
         </section>

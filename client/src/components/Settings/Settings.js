@@ -4,6 +4,7 @@ import wallpaper2 from "../../images/wallpaper2.jpg";
 import wallpaper3 from "../../images/wallpaper3.jpg";
 import wallpaper4 from "../../images/wallpaper4.jpg";
 import wallpaper5 from "../../images/wallpaper5.jpg";
+import wallpaper6 from "../../images/wallpaper6.jpg";
 import React, { useContext } from "react";
 import { SettingsContext } from "../../context/SettingsContext";
 
@@ -12,23 +13,23 @@ export default function Settings() {
     0: {
       primary: "#00539C",
       secondary: "#EEA47F",
-      text: "white",
+      text: "white"
     },
     1: {
       primary: "#CC313D",
       secondary: "#F7C5CC",
-      text: "white",
+      text: "white"
     },
     2: {
       primary: "#201E20",
       secondary: "#E0A96D",
-      text: "white",
+      text: "white"
     },
     3: {
       primary: "#2C5F2D",
       secondary: "#FFE77A",
-      text: "white",
-    },
+      text: "white"
+    }
   };
 
   const { changeBackground, changeTheme } = useContext(SettingsContext);
@@ -69,6 +70,7 @@ export default function Settings() {
               <option value={wallpaper3}>Wallpaper 3</option>
               <option value={wallpaper4}>Wallpaper 4</option>
               <option value={wallpaper5}>Wallpaper 5</option>
+              <option value={wallpaper6}>Wallpaper 6</option>
             </select>
           </div>
           <div className="change-theme">

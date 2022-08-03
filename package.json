@@ -1,7 +1,7 @@
 {
-  "name": "watchlist",
+  "name": "films-watchlist",
   "version": "1.0.0",
-  "description": "Ghibli films watchlist app",
+  "description": "watchlist app for Studio Ghibli films",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "client": "cd client && npm i && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
-  "keywords": [],
+  "keywords": ["watchlist", "ghibli"],
   "author": "",
   "license": "ISC",
   "dependencies": {
