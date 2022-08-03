@@ -5,6 +5,8 @@
 /client/node_modules
 /.pnp
 .pnp.js
+sandbox.config.json
+/.codesandbox
 
 # testing
 /coverage
