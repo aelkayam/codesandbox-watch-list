@@ -9,7 +9,7 @@ export default function Add() {
 
   // load all movies:
   useEffect(() => {
-    fetch("https://372smd-5000.sse.codesandbox.io/ghibli").then((res) => {
+    fetch("https://98qly2-5000.sse.codesandbox.io/ghibli").then((res) => {
       res.json().then((data) => {
         if (!data.errors) {
           setResults(data);
@@ -24,7 +24,7 @@ export default function Add() {
   function inputChange(e) {
     e.preventDefault();
     setQuery(e.target.value);
-    fetch("https://372smd-5000.sse.codesandbox.io/ghibli").then((res) => {
+    fetch("https://98qly2-5000.sse.codesandbox.io/ghibli").then((res) => {
       res.json().then((data) => {
         if (!data.errors) {
           setResults(() =>
