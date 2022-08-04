@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Register from "./components/Register/Register";
 import Settings from "./components/Settings/Settings";
+import MoviePage from "./components/MoviePage/MoviePage";
 import "./style.css";
 import "./lib/font-awesome/css/all.min.css";
 
@@ -31,6 +32,7 @@ export default function App() {
               <Route path="/watched" element={<Watched />} />
               <Route path="/add" element={<Add />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/moviePage/:id" element={<MoviePage />} />
             </Routes>
           </Router>
         </SettingsProvider>

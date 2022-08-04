@@ -37,6 +37,7 @@ form {
 .login a,
 .login a:visited {
   color: var(--primary);
+  font-size: 1.1rem;
 }
 
 input[type="text"],

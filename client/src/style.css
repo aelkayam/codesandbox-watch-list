@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap");
 
 :root {
   --primary: #00539c;
@@ -71,7 +70,7 @@ body:before {
   font-weight: 700;
   display: inline-block;
   border: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   line-height: 1.1;
 }

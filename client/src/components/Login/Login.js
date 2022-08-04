@@ -42,9 +42,12 @@ export default function Login() {
               Start adding movies!
             </Link>
           </p>
+          <p>
+            <a href="/settings">Settings</a>
+          </p>
           <a href="/" onClick={() => logout()}>
             Logout
-          </a>{" "}
+          </a>
         </section>
       ) : (
         <section>
