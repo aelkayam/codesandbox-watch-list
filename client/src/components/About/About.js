@@ -9,7 +9,7 @@ export default function About() {
         <div className="header">
           <h1 className="heading">About Studio-Ghibli</h1>
         </div>
-        <main>
+        <div className="main">
           <div className="info">
             <p>
               Studio Ghibli was founded in 1985 by animated film directors{" "}
@@ -32,7 +32,7 @@ export default function About() {
             </p>
           </div>
           <img className="info-logo" src={totoro} alt="totoro-transparent" />
-        </main>
+        </div>
       </div>
     </div>
   );

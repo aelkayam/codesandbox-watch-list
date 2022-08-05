@@ -13,21 +13,24 @@
   margin: 0;
 }
 
-main {
+.main {
   display: flex;
   flex-direction: column;
 }
 
-main .info {
+.main .info {
   text-indent: 15px;
   font-weight: 400;
-  padding-inline: 20%;
-  margin: 8px;
+  padding-inline: 15%;
   line-height: 1.8;
   font-size: 1.2rem;
 }
 
-main .info-logo {
+.main p {
+  margin-top: 0px;
+}
+
+.main .info-logo {
   width: 40%;
   align-self: center;
 }
