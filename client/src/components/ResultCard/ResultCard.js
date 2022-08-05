@@ -1,6 +1,7 @@
 import "./ResultCard.css";
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import { Link } from "react-router-dom";
 
 export default function ResultCard({ movie }) {
   const {
@@ -21,7 +22,10 @@ export default function ResultCard({ movie }) {
   return (
     <div className="result-card">
       <div className="poster-wrapper">
-        {<img src={movie.image} alt={`${movie.title} Poster`} />}
+        <Link className="link-movie-page" to={`/moviePage/${movie.id}`}>
+          <img src={movie.image} alt={`${movie.title} Poster`} />
+          {/* <span className="link-movie-page"></span> */}
+        </Link>
       </div>
       <div className="info">
         <div className="header">
