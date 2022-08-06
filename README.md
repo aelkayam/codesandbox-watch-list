@@ -19,7 +19,11 @@
 </ul><ul>
 <li>Different themes and backgrounds</li>
 </ul><h2>Screenshots</h2>
-<hr><p><img src="https://i.postimg.cc/Xqys2xPV/Annotation-2022-08-06-132130.png" alt=""></p><h2>Setup</h2>
+<hr>
+<p><img src="https://i.postimg.cc/Xqys2xPV/Annotation-2022-08-06-132130.png" alt="home-page"></p>
+<p><img src="https://i.postimg.cc/pVcSvcMX/Annotation-2022-08-06-133633.png" alt="movies-list"></p>
+<p><img src="https://i.postimg.cc/QCMxT4fd/Annotation-2022-08-06-134341.png" alt="movie-page"></p>
+<h2>Setup</h2>
 <hr><p>This project was bootstrapped with <a href="https://github.com/facebook/create-react-app">Create React App</a>.</p>
 <p>In the project directory, you can run:</p>
 <h3><code>npm start</code></h3>
