@@ -2,6 +2,7 @@
 <hr><p>Personal watch list app for tracking films made by Studio-Ghibli.</p><h2>General Information</h2>
 <hr><ul>
 <li>Add movies you want to watch and mark movies you have watched into a separate lists. Click the posters to view more details on the movie.</li>
+<li>CodeSandbox link <a target="_blank" href="https://98qly2-3000.sse.codesandbox.io/">here</a></li>
 </ul><h2>Technologies Used</h2>
 <hr><ul>
 <li>HTML</li>
