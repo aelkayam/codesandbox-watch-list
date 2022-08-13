@@ -23,13 +23,14 @@ export default function Add() {
   // filter by title:
   function inputChange(e) {
     e.preventDefault();
-    setQuery(e.target.value);
+    let searchText = e.target.value;
+    setQuery(searchText);
     fetch("https://98qly2-5000.sse.codesandbox.io/ghibli").then((res) => {
       res.json().then((data) => {
         if (!data.errors) {
           setResults(() =>
             data.filter((movie) =>
-              movie.title.toLowerCase().includes(query.toLowerCase())
+              movie.title.toLowerCase().includes(searchText.toLowerCase())
             )
           );
         } else {

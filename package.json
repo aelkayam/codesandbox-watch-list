@@ -22,6 +22,7 @@
     "express": "^4.18.1",
     "nodemon": "^2.0.19",
     "nth-check": "2.1.1",
+    "react": "18.2.0",
     "react-router-dom": "6.3.0"
   }
 }
